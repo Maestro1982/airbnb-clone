@@ -1,3 +1,5 @@
+import ClientOnly from './components/ClientOnly';
+import Modal from './components/modals/Modal';
 import Navbar from './components/navbar/Navbar';
 import './globals.css';
 import { Nunito } from 'next/font/google';
@@ -19,7 +21,11 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={font.className}>
-        <Navbar />
+        {/* ClientOnly component prevents to get an hydration error thats why we wrap it around other client components */}
+        <ClientOnly>
+          <Navbar />
+          <Modal isOpen title='Test' />
+        </ClientOnly>
         {children}
       </body>
     </html>
