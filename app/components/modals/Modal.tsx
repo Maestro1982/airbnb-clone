@@ -78,7 +78,7 @@ const Modal: React.FC<ModalProps> = ({
           >
             <div className='translate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none'>
               {/* HEADER */}
-              <div className='flex items-center p-6 rounded-t justify-center relative border-b-[1px]'>
+              <div className='flex items-center p-2 rounded-t justify-center relative border-b-[1px]'>
                 <button
                   onClick={onCloseHandler}
                   className='p-1 border-0 hover:opacity-70 transition absolute right-9'
@@ -107,6 +107,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={onSubmitHandler}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>

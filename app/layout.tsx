@@ -3,6 +3,7 @@ import RegisterModal from './components/modals/RegisterModal';
 import Navbar from './components/navbar/Navbar';
 import './globals.css';
 import { Nunito } from 'next/font/google';
+import ToasterProvider from './providers/ToasterProvider';
 
 export const metadata = {
   title: 'Airbnb',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={font.className}>
         {/* ClientOnly component prevents to get an hydration error thats why we wrap it around other client components */}
         <ClientOnly>
+          <ToasterProvider />
           <Navbar />
           <RegisterModal />
         </ClientOnly>
