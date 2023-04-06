@@ -7,3 +7,12 @@ body,
 :root {
   height: 100%;
 }
+
+@layer components {
+  ::-webkit-scrollbar-thumb {
+    @apply bg-rose-500 shadow-sm;
+  }
+  ::-webkit-scrollbar {
+    @apply w-1 bg-transparent;
+  }
+}
