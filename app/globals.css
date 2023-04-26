@@ -10,7 +10,7 @@ body,
 
 @layer components {
   ::-webkit-scrollbar-thumb {
-    @apply bg-rose-500 shadow-sm;
+    @apply bg-[#f43f5e] shadow-sm !important;
   }
   ::-webkit-scrollbar {
     @apply w-1 bg-transparent;
@@ -22,4 +22,13 @@ body,
 .leaflet-pane,
 .leaflet-top {
   z-index: 0 !important;
+}
+
+.rdrMonth {
+  width: 100% !important;
+}
+
+.rdrCalendarWrapper {
+  font-size: 16px !important;
+  width: 100% !important;
 }
